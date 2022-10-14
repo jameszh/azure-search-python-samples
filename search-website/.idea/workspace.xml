@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07a00e56-f9d0-4a01-814f-17fc6bb10381" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bulk-upload/bulk-upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/bulk-upload/bulk-upload.py" afterDir="false" />
-    </list>
+    <list default="true" id="07a00e56-f9d0-4a01-814f-17fc6bb10381" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
