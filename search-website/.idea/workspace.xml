@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a00e56-f9d0-4a01-814f-17fc6bb10381" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.github/workflows/azure-static-web-apps-orange-mushroom-07861d40f.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bulk-upload/bulk-upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/bulk-upload/bulk-upload.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bulk-upload/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bulk-upload/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppHeader/AppHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.github/workflows/azure-static-web-apps-happy-meadow-0e540d20f.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../.github/workflows/azure-static-web-apps-happy-meadow-0e540d20f.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
