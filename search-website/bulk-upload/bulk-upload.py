@@ -1,3 +1,4 @@
+import os
 import sys
 import json
 import requests
@@ -5,7 +6,7 @@ import pandas as pd
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from azure.search.documents.indexes import SearchIndexClient
-from azure.search.documents.indexes.models import SearchIndex 
+from azure.search.documents.indexes.models import SearchIndex
 from azure.search.documents.indexes.models import (
     ComplexField,
     CorsOptions,
@@ -15,10 +16,12 @@ from azure.search.documents.indexes.models import (
     SimpleField,
     SearchableField
 )
+from dotenv import load_dotenv
 
+load_dotenv()
 # Get the service name (short name) and admin API key from the environment
-service_name = 'YOUR-SEARCH-SERVICE-NAME'
-key = 'YOUR-SEARCH-SERVICE-ADMIN-API-KEY'
+service_name = os.environ.get('SERVICE_NAME')
+key = os.environ.get('ADMIN_KEY')
 endpoint = "https://{}.search.windows.net/".format(service_name)
 
 # Give your index a name
@@ -31,6 +34,7 @@ index_schema = './good-books-index.json'
 # Books catalog
 books_url = "https://raw.githubusercontent.com/zygmuntz/goodbooks-10k/master/books.csv"
 batch_size = 1000
+
 
 # Instantiate a client
 class CreateClient(object):
@@ -52,6 +56,8 @@ class CreateClient(object):
     def create_admin_client(self):
         return SearchIndexClient(endpoint=endpoint,
                                  credential=self.credentials)
+
+
 # Get Schema from File or URL
 def get_schema_data(schema, url=False):
     if not url:
@@ -59,25 +65,24 @@ def get_schema_data(schema, url=False):
             schema_data = json.load(json_file)
             return schema_data
     else:
-            data_from_url = requests.get(schema)
-            schema_data = json.loads(data_from_url.content)
-            return schema_data
-    
+        data_from_url = requests.get(schema)
+        schema_data = json.loads(data_from_url.content)
+        return schema_data
+
 
 # Create Search Index from the schema
 # If reading the schema from a URL, set url=True
 def create_schema_from_json_and_upload(schema, index_name, admin_client, url=False):
-
     cors_options = CorsOptions(allowed_origins=["*"], max_age_in_seconds=60)
     scoring_profiles = []
     schema_data = get_schema_data(schema, url)
 
     index = SearchIndex(
-                name=index_name,
-                fields=schema_data['fields'],
-                scoring_profiles=scoring_profiles,
-                suggesters=schema_data['suggesters'], 
-                cors_options=cors_options)
+        name=index_name,
+        fields=schema_data['fields'],
+        scoring_profiles=scoring_profiles,
+        suggesters=schema_data['suggesters'],
+        cors_options=cors_options)
 
     try:
         upload_schema = admin_client.create_index(index)

@@ -1,0 +1,74 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="ComposeUnknownValues" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="224" name="JavaScript" />
+        <language minSize="200" name="TypeScript" />
+        <language minSize="920" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="IncorrectHttpHeaderInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="customHeaders">
+        <set>
+          <option value="api-key" />
+        </set>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="Mypy" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <value>
+          <list size="6">
+            <item index="0" class="java.lang.String" itemvalue="pyarrow" />
+            <item index="1" class="java.lang.String" itemvalue="s3fs" />
+            <item index="2" class="java.lang.String" itemvalue="boto3" />
+            <item index="3" class="java.lang.String" itemvalue="s3transfer" />
+            <item index="4" class="java.lang.String" itemvalue="botocore" />
+            <item index="5" class="java.lang.String" itemvalue="moto" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+          <option value="E402" />
+          <option value="E302" />
+          <option value="E101" />
+          <option value="W191" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="airflow.operators.*" />
+          <option value="tutorials.services.urlparse" />
+          <option value="cfnresponse" />
+          <option value="boto3" />
+          <option value="airflow.mwaaworkshop.scripts.glue.HudiUpsertNYTaxiData.*" />
+          <option value="airflow.mwaaworkshop.scripts.glue.BigQuery_S3.awsglue" />
+          <option value="airflow.mwaaworkshop.scripts.glue.BigQuery_S3.pyspark" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="ShellCheck" enabled="true" level="ERROR" enabled_by_default="true">
+      <shellcheck_settings value="SC2016" />
+    </inspection_tool>
+    <inspection_tool class="TsLint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="TypeScriptValidateJSTypes" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+  </profile>
+</component>
