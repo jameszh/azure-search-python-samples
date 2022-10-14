@@ -18,7 +18,7 @@ from azure.search.documents.indexes.models import (
 )
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv('../../.env')
 # Get the service name (short name) and admin API key from the environment
 service_name = os.environ.get('SERVICE_NAME')
 key = os.environ.get('ADMIN_KEY')
